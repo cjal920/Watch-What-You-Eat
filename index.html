@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|IM+Fell+DW+Pica+SC|Oswald|Rye|Six+Caps" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="assets/script/lodash.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    
+    <title>Watch What You Eat</title>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="title">Watch What You Eat</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="about">
+                        We believe those with a passion for making great food should be able to spend 
+                        more time cooking and less time looking for the right recipe. That's why we 
+                        created WATCH WHAT YOU EAT. Our nifty little app connects cooking enthusiasts 
+                        with great YouTube cooking videos curated using targeted culinary criteria from 
+                        TheMealDB so you can be confident the videos you search for here by dish, 
+                        region, category and/or ingredient(s) will be well worth watching. 
+                        <br><br>
+                        Now Let's Get Cooking!
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="card">
+                <h3 class="card-header">&#8212; Make Your Menu &#8212;</h3>
+            </div>   
+        </div>
+        
+        <form>
+            <div class="container-form">
+                <div class="row">
+                    <div class="col-md-1">
+                        <div id="hand">&#9758;</div>
+                    </div>
+                    
+                    <div class="col-md-5 form-border">
+                        <div class="form-group">
+                            <label for="dish" id="label">BY DISH</label>
+                            <input type="text" class="form-control" id="dish" placeholder="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-1">
+                        <div id="hand">&#9758;</div>
+                    </div>
+                    
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="category" id="label">BY CATEGORY</label>
+                            <input type="text" class="form-control" id="category" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-1">
+                        <div id="hand">&#9758;</div>
+                    </div>
+                    
+                    <div class="col-md-5 form-border">
+                        <div class="form-group">
+                            <label for="region" id="label">BY REGION</label>
+                            <input type="text" class="form-control" id="region" placeholder="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-1">
+                        <div id="hand">&#9758;</div>
+                    </div>          
+                    
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="ingredients" id="label">BY INGREDIENT</label>
+                            <input type="text" class="form-control" id="ingredients" placeholder="">
+                        </div>   
+                    </div>     
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="btn-search">Search</button>
+        </form>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <h3 class="card-header">&#8212; House Specialties &#8212;</h3>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover" id="ingredient-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" id="display-head">DISH</th>
+                                </tr>
+                            </thead>
+                            <tbody id="results-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <h3 class="card-header">&#8212; Personal Specialties &#8212;</h3>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover" id="saved-recipe-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" id="display-head1">DISH</th>
+                                    <th scope="col" id="display-head2">CATEGORY</th>
+                                    <th scope="col" id="display-head3">REGION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td scope="col" id="dish-display"></td>
+                                <td scope="col" id="category-display"></td>
+                                <td scope="col" id="region-display"></td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div id="recipe-display" class="modal-content">
+        </div>
+    </div>
+    
+</div>
+
+<script src="assets/script/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Six Caps', sans-serif;
+    font-family: 'Rye', cursive;
+    font-family: 'IM Fell DW Pica SC', serif;
+
+    text-align: center;
+    color: #311e01;
+    background: #f8f8dc;
+}
+
+.wrapper {
+    border: #000000 4px double;
+    border-image-slice: 90%;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.title  {
+    font-family: 'Fredericka the Great', cursive;
+    background: #f8f8dc;
+    font-size: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: -100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.card-header {
+    padding: 40px;
+    font-size: 30px;
+}
+
+.about  {
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 20px;
+    padding: 20px;
+    border-top: #000000 2px dotted;
+    border-bottom: #000000 2px dotted;
+}
+
+#display-head {
+    font-size: 20px;
+    padding: 10px;
+    border-top: #000000 2px dotted;
+    border-bottom: #000000 2px dotted;
+}
+
+.jumbotron,
+.card,
+.card-header  {
+    background: #f5f8dc;
+    border: #f5f8dc;
+}
+
+#dish,
+#category,
+#region,
+#ingredients    {
+    background: #f5f8dc;
+    border: #f5f8dc;
+}
+
+#dish:hover,
+#category:hover,
+#region:hover,
+#ingredients:hover  {
+    background: #fdfdf1;
+    border: #f8f0dc;
+}
+
+#btn-search, #btn-recipe, .save    {
+    margin: 40px;
+    padding: 20px;
+    border-radius: 60%;
+    border: #000000 4px double;
+    color: #311e01;
+    background: #f5f8dc;
+}
+
+#btn-recipe    {
+    margin: 40px;
+    padding: 20px;
+    border-radius: 60%;
+    border: #000000 4px double;
+    color: #311e01;
+    background: #f5f8dc;
+}
+
+#btn-search:hover  {
+    color: #f5f8dc;
+    background: #311e01;
+}
+
+#hand   {
+    margin-top: 35px;
+}
+
+.form-control,
+#label   {
+    margin-left: -40px;
+    margin-top: 5px;
+}
+
+.form-border {
+    border-right: 2px #000000 dotted;
+}
+
+.modal-body {
+    text-align: left;
+    color: #311e01;
+    background: #f8f8dc;    
+}
+
+#recipe-display{
+    font-size: 150%;
+    align-items: center
+}
+
+.recipe-p {
+    margin: 5px 20%; 
+    background: #f7f7ce
+}
+
+.recipe-i {
+    background: #f7f7ce
+}
+
+iframe  {
+    padding: 50px;
+}
