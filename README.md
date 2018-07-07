@@ -1,2 +1,2 @@
 # Watch-What-You-Eat
-team project
+team project - F. Dunigan, C. Larkin, S. Saunders
